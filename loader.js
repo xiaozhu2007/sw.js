@@ -31,6 +31,10 @@ const registerServiceWorker = async (url) => {
 
 registerServiceWorker(
   window.URL.createObjectURL(
-    getFileBlob(`https://xiaozhu2007.github.io/sw.js/index.js?_t=${Date.now()}`)
+    new Blob([
+      getFileBlob(
+        `https://xiaozhu2007.github.io/sw.js/index.js?_t=${Date.now()}`
+      ),
+    ])
   )
 );
